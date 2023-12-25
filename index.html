@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="foto/logo.png" type="image/gif" sizes="16x16">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        input[type='submit'],
+        button,
+        [aria-label] {
+            cursor: pointer;
+        }
+
+        #spoiler {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img width="50px" src="foto/logo.png"> Makan Kuy
+        </div>
+    </nav>
+    <div class="header">
+        <div class="container">
+            <div class="baris">
+                <div class="col-2">
+                    <br><br>
+                    <h2>
+                        UTS PTI
+                    </h2>
+                    <h1>Data Makanan</h1>
+                </div>
+                <div class="col-2">
+                    <center>
+                        <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+                            <label>Nama Makanan</label>
+                            <input type="text" id="tambahnamamakanan" size="50" />
+                            <button type="submit" class="btn" style="font-size: 10px;width: 250px;"> Tambah</button>
+                        </form>
+                    </center>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="badan">
+        <div class="isi">
+            <center>
+                <h1>Daftar Makanan</h1>
+            </center>
+            <div class="baris">
+                <div class="col-6">
+                    <center>
+                        <br>
+                        <img src="foto/makanan.jpg" width="450px">
+                        <br><br>
+                    </center>
+                </div>
+                <div class="col-6" style="background-color: rgb(196, 253, 255);padding: 25px 25px 25px 25px;">
+                <p id="jumlah" hidden></p>
+                    <table width="100%" border="0">
+                        <thead>
+                            <tr>
+                                <th>Nama Makanan</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="makanan">
+                        </tbody>
+                    </table>
+                    <br />
+                        <div id="spoiler" role="aria-hidden">
+                            <form action="javascript:void(0);" method="POST" id="saveEdit">
+                            <center>
+                                <input size="50" type="text" id="editnamamakanan">
+                                <input class="btn" type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">✖</a>
+                                </center>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="badan">
+            <div class="isi">
+                <center>
+                    <h1>Randomize</h1>
+                </center>
+                <div class="baris">
+                    <div class="col-6">
+                        <center>
+                            <br>
+                            <img src="foto/randomize.png" width="450px">
+                            <br><br>
+                        </center>
+                    </div>
+                    <div class="col-6" style="background-color: rgb(196, 253, 255);padding: 25px 25px 25px 25px;">
+                        <button class="btn" onclick="show()">Acak &#8594;</button>
+                        <br>
+                        <label>Breakfast</label>
+                        <br>
+                        <input size="50" type="text" id="breakfast" name="breakfast">
+                        <br><br>
+                        <label>Lunch</label>
+                        <br>
+                        <input size="50" type="text" id="lunch" name="lunch">
+                        <br><br>
+                        <label>Dinner</label>
+                        <br>
+                        <input size="50" type="text" id="dinner" name="dinner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <br>
+        <br>
+        <div class="footer">
+            <p class="tulisanfooter">UTS PTI</p>
+            <br>
+            <br>
+        </div>
+</body>
+<script src="script.js"></script>
+</html>
